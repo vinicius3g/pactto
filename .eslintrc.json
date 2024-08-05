@@ -20,7 +20,7 @@
     }
   },
   "globals": {
-    "React": true
+    "React": "readonly"
   },
   "rules": {
     "new-cap": 0,
@@ -74,5 +74,5 @@
     ],
     "arrow-body-style": ["off"]
   },
-  "ignorePatterns": ["node_modules/", ".next/"]
+  "ignorePatterns": ["node_modules/", ".next/", "next-env.d.ts"]
 }
