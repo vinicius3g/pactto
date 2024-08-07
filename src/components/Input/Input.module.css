@@ -1,0 +1,30 @@
+.input_container {
+  width: 100%;
+  display: flex;
+  border: 1px solid theme('colors.gray.500'); /* Borda padrão */
+  padding: 10px;
+  transition: border-color 0.3s;
+  border-radius: 1rem;
+}
+
+.input_containerFocused {
+  border-color: theme('colors.teal'); /* Muda para azul quando focado */
+}
+
+.input {
+  width: 100%;
+  border: none;
+  padding: 8px;
+  font-size: 1.6rem;
+  background: transparent;
+  color: theme('colors.teal');
+  outline: none;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 8px;
+}
