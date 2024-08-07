@@ -1,0 +1,31 @@
+.item {
+  position: relative;
+  z-index: 0;
+}
+
+.item:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: theme('colors.gray.700');
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.item_wrapper {
+  display: flex;
+  height: 48px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: -1;
+}
+
+.item_wrapper p {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  color: theme('colors.gray.400');
+}
