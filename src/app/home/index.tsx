@@ -23,8 +23,10 @@ export const Home = () => {
 
   return (
     <>
-      <Menu handleClose={handleCloseMenu} close={menuOpen} />
-      <main className={`main ${menuOpen ? 'shifted' : ''} p-14`}>
+      <div className="p-12 pb-0">
+        <Menu handleClose={handleCloseMenu} close={menuOpen} />
+      </div>
+      <main className={`main ${menuOpen ? 'shifted' : ''} p-12`}>
         <div>
           <h3 className='font-medium text-4xl text-white mb-9'>Hey Vinicius, welcome to Pactto!</h3>
         </div>

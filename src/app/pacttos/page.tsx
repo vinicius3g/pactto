@@ -1,4 +1,4 @@
-import { Pacttos } from '@/app/pacttos'
+import { Pacttos } from '.'
 import '@/../styles/index.css';
 
 export default function Page() {

@@ -17,8 +17,10 @@ export const ItensToReview = () => {
 
   return (
     <>
-      <Menu handleClose={handleCloseMenu} close={menuOpen} />
-      <main className={`main ${menuOpen ? 'shifted' : ''}`}>
+      <div className="p-12 pb-0">
+        <Menu handleClose={handleCloseMenu} close={menuOpen} />
+      </div>
+      <main className={`main ${menuOpen ? 'shifted' : ''} p-12`}>
         <div className='mb-14 mt-28'>
           <div className='flex items-center justify-between mb-14'>
             <h1 className='text-5xl  text-white mb-9 font-bold'>There are no review requests sent to you</h1>
