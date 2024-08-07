@@ -1,2 +1,15 @@
 @import './tailwind';
-@import './globals.css'
+@import './globals.css';
+
+.name {
+  color: red;
+  font-size: 6rem;
+}
+
+.main {
+  transition: margin-left 0.3s ease;
+}
+
+.shifted {
+  margin-left: 320px;
+}
