@@ -10,11 +10,15 @@ const config: Config = {
   theme: {
     colors: {
       black: {
-        800: '#2f2f2f'
+        700: '#232225',
+        800: '#212121'
       },
       gray : {
+        300: '#cbcbcb',
         400: '#B8B8B8',
         500:'#626262',
+        700: '#545454',
+        600: '#2f2f2f'
       },
       teal: '#1dbba5',
       white: '#ffffff',
