@@ -29,3 +29,11 @@
   line-height: 1.4rem;
   color: theme('colors.gray.400');
 }
+
+.item.active {
+  background: theme('colors.gray.800');
+}
+
+.active .item_wrapper p {
+  color: theme('colors.teal');
+}
