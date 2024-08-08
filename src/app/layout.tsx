@@ -1,14 +1,15 @@
 import { Inter } from 'next/font/google'
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 
 import '@/../styles/index.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  description: 'clone page',
-  title: 'Pactto',
-}
+// export const metadata: Metadata = {
+//   description: 'clone page',
+//   title: '...'
+// }
 
 export default function RootLayout({
   children,
@@ -17,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>{children}</body>
+      <Suspense fallback={<div>Loading...</div>}>
+        <body className={`${inter.className}`}>{children}</body>
+      </Suspense>
     </html>
   )
 }
