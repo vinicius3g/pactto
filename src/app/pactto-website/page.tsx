@@ -1,12 +1,12 @@
 import { Metadata } from 'next';
-import { ItensToReview } from '.';
+import { PacttoWebsite } from './index'
 import '@/../styles/index.css';
 
 export const metadata: Metadata = {
-  description: 'itens to review page',
-  title: 'itens to review',
+  description: 'pactto website',
+  title: 'pactto website',
 }
 
 export default function Page() {
-  return <ItensToReview />
+  return <PacttoWebsite />
 }

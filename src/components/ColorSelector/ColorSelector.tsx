@@ -22,10 +22,9 @@ export const ColorSelector: React.FC<IColorSelector> = ({
         {label}
       </label>
       <MuiColorInput
+        className="w-52 text-white"
         format="hex"
-        value={value}
         onChange={handleChange}
-        className={`w-52 text-white`}
         sx={{
           "& .MuiInputBase-root": {
             color: "white",
@@ -52,6 +51,7 @@ export const ColorSelector: React.FC<IColorSelector> = ({
             },
           },
         }}
+        value={value}
       />
     </div>
   );

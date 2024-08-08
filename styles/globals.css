@@ -14,3 +14,12 @@ body {
 button {
   outline: none;
 }
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: none;
+  border-color: #e5e7eb;
+}

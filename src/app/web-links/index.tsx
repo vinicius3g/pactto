@@ -18,7 +18,7 @@ export const WebLinks = () => {
   return (
     <>
       <div className="p-12 pb-0">
-        <Menu handleClose={handleCloseMenu} close={menuOpen} />
+        <Menu close={menuOpen} handleClose={handleCloseMenu} />
       </div>
       <main className={`main ${menuOpen ? 'shifted' : ''} p-12`}>
         <div className='mb-14 mt-28'>

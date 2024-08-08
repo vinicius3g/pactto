@@ -41,7 +41,7 @@ export const PersonalInformation = () => {
   return (
     <>
       <div className="p-12 pb-0">
-        <Menu handleClose={handleCloseMenu} close={menuOpen} />
+        <Menu close={menuOpen} handleClose={handleCloseMenu} />
       </div>
       <main className={`main ${menuOpen ? 'shifted' : ''} p-12`}>
 
@@ -53,7 +53,7 @@ export const PersonalInformation = () => {
               {...register("firstName", { required: "First name is required" })}
               defaultValue="Vinicius"
             />
-            {errors.firstName && <p className="error">{errors.firstName.message}</p>}
+            {errors.firstName ? <p className="error">{errors.firstName.message}</p> : null}
           </div>
 
           <div className="input_wrapper">
@@ -62,7 +62,7 @@ export const PersonalInformation = () => {
               id="lastName"
               {...register("lastName", { required: "Last name is required" })}
             />
-            {errors.lastName && <p className="error">{errors.lastName.message}</p>}
+            {errors.lastName ? <p className="error">{errors.lastName.message}</p> : null}
           </div>
 
           <div className="input_wrapper">
@@ -72,7 +72,7 @@ export const PersonalInformation = () => {
               {...register("email", { required: "Email is required" })}
               defaultValue="default.kastin@gmail.com"
             />
-            {errors.email && <p className="error">{errors.email.message}</p>}
+            {errors.email ? <p className="error">{errors.email.message}</p> : null}
           </div>
 
           <div className="input_wrapper">
@@ -89,7 +89,7 @@ export const PersonalInformation = () => {
               <option value="France">France</option>
             </select>
 
-            {errors.country && <p className="error">{errors.country.message}</p>}
+            {errors.country ? <p className="error">{errors.country.message}</p> : null}
           </div>
 
           <p className="text-2xl text-white mt-14 mb-10">
@@ -98,23 +98,48 @@ export const PersonalInformation = () => {
 
           <div>
             <div className="checkbox_wrapper">
-              <input type="checkbox" id="design" {...register("activities")} value="Design" />
+              <input
+                id="design"
+                type="checkbox"
+                {...register("activities")}
+                value="Design"
+              />
               <label htmlFor="design">Design</label>
             </div>
             <div className="checkbox_wrapper">
-              <input type="checkbox" id="development" {...register("activities")} value="Development" />
+              <input
+                id="development"
+                type="checkbox"
+                {...register("activities")}
+                value="Development"
+              />
               <label htmlFor="development">Development</label>
             </div>
             <div className="checkbox_wrapper">
-              <input type="checkbox" id="sports" {...register("activities")} value="Sports" />
+              <input
+                id="sports"
+                type="checkbox"
+                {...register("activities")}
+                value="Sports"
+              />
               <label htmlFor="sports">Sports</label>
             </div>
             <div className="checkbox_wrapper">
-              <input type="checkbox" id="medical" {...register("activities")} value="Medical" />
+              <input
+                id="medical"
+                type="checkbox"
+                {...register("activities")}
+                value="Medical"
+              />
               <label htmlFor="medical">Medical</label>
             </div>
             <div className="checkbox_wrapper">
-              <input type="checkbox" id="inspections" {...register("activities")} value="Inspections" />
+              <input
+                id="inspections"
+                type="checkbox"
+                {...register("activities")}
+                value="Inspections"
+              />
               <label htmlFor="inspections">Inspections</label>
             </div>
 
@@ -138,36 +163,36 @@ export const PersonalInformation = () => {
                 validate: value => value !== "default.kastin823" || "Invalid user name."
               })}
             />
-            {errors.username && <p className="error">{errors.username.message}</p>}
+            {errors.username ? <p className="error">{errors.username.message}</p> : null}
           </div>
 
           <div className="input_wrapper">
             <input
               className="general_input"
-              type="password"
               id="password"
               placeholder="Password"
+              type="password"
               {...register("password", { required: "Password is required" })}
             />
-            {errors.password && <p className="error">{errors.password.message}</p>}
+            {errors.password ? <p className="error">{errors.password.message}</p> : null}
           </div>
 
           <div className="input_wrapper">
             <input
               className="general_input"
-              type="password"
               id="confirmPassword"
               placeholder="Confirm Password"
+              type="password"
               {...register("confirmPassword", {
                 required: "Please confirm your password",
                 validate: value => value === watch('password') || "Passwords do not match"
               })}
             />
-            {errors.confirmPassword && <p className="error">{errors.confirmPassword.message}</p>}
+            {errors.confirmPassword ? <p className="error">{errors.confirmPassword.message}</p> : null}
           </div>
 
           <div className="button_wrapper flex justify-between items-center mt-14">
-            <button className="reset" type="button" onClick={handleReset}>
+            <button className="reset" onClick={handleReset} type="button">
               <span>reset changes</span>
             </button>
             <button className="save" type="submit">

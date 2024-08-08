@@ -9,7 +9,7 @@ import Input from '@/components/Input/Input';
 export const Home = () => {
   const [menuOpen, setMenuOpen] = useState(true);
 
-  const handleCloseMenu = () => {
+  function handleCloseMenu(): void {
     setMenuOpen(!menuOpen);
   }
 
@@ -17,14 +17,14 @@ export const Home = () => {
     console.log('Uploading')
   }
 
-  const handleSeach = (e: React.FormEvent<HTMLInputElement>) => {
-    console.log('Search', e.currentTarget.value)
+  const handleSeach = (event: React.FormEvent<HTMLInputElement>) => {
+    console.log('Search', event.currentTarget.value)
   }
 
   return (
     <>
       <div className="p-12 pb-0">
-        <Menu handleClose={handleCloseMenu} close={menuOpen} />
+        <Menu close={menuOpen} handleClose={handleCloseMenu} />
       </div>
       <main className={`main ${menuOpen ? 'shifted' : ''} p-12`}>
         <div>
@@ -55,14 +55,15 @@ export const Home = () => {
         <div className='flex mb-2'>
           <p className='todo_flag'>todo</p>
           <p className='todo'>Wanna review videos, images or audio files with your phone or tablet? Download Pactto for {' '}
-            <Link href='/'>iOS</Link> or {' '} <Link href='/'>Android</Link></p>
+            <Link href='/'>iOS</Link> or {' '} <Link href='/'>Android</Link>
+          </p>
         </div>
 
         <div className='mb-14 mt-28'>
           <div className='flex items-center justify-between mb-14'>
             <h1 className='text-5xl  text-white mb-9 font-bold'>My uploads</h1>
 
-            <Button handleExec={handleUpload} text='upload new video' icon />
+            <Button handleExec={handleUpload} icon text='upload new video' />
           </div>
 
           <div>

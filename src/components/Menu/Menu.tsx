@@ -13,13 +13,13 @@ interface IMenuProps {
 const Menu: React.FC<IMenuProps> = ({ handleClose, close }) => {
 
   if (!close) {
-    return <button className={styles.open_button} onClick={handleClose}><i></i></button>;
+    return <button className={styles.open_button} aria-label="Open menu" onClick={handleClose}><i /></button>;
   }
 
   return (
-    <div className={`${styles.menu_container} ${!close ? styles.closed : ''} relative`}>
-      <button className={`${styles.close_button} absolute`} onClick={handleClose}>
-        <i></i>
+    <div className={`${styles.menu_container} ${!close ? styles.closed : ''} relative`} aria-label="Menu">
+      <button className={`${styles.close_button} absolute`} onClick={handleClose} aria-label="Close menu">
+        <i />
       </button>
 
       <div className='p-12 pb-0'>
@@ -29,7 +29,7 @@ const Menu: React.FC<IMenuProps> = ({ handleClose, close }) => {
           src="/pactto-logo.svg"
           width={140}
         />
-        <p className={`${styles.subtitle} mt-5 font-bold`}>YOUR PACTTO PROFILE</p>
+        <p className={`${styles.subtitle} mt-5 font-bold`} aria-label="Profile text">YOUR PACTTO PROFILE</p>
       </div>
 
       <Profile attributes='mt-10 mb-10  p-12 pb-0' />

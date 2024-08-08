@@ -12,19 +12,19 @@ const Profile: React.FC<IProfile> = ({ attributes }) => {
     <div className={`${styles.profile_container} ${attributes}`} >
       <div className='flex w-full items-center'>
         <Image
-          className='rounded-full'
           alt="Picture of the author"
+          className='rounded-full'
           height={40}
           src="/avatar-placeholder.png"
           width={40}
         />
 
-        <div className={`${styles.pro_flag} ml-4 mr-4 mb-4`}>
-          <span>TRIAL: 12 DAYS LEFT</span>
-          <p>pactto pro</p>
+        <div className={`${styles.pro_flag} ml-4 mr-4 mb-4`} aria-label="trial flag">
+          <span aria-label="trial text">TRIAL: 12 DAYS LEFT</span>
+          <p aria-label="package">pactto pro</p>
         </div>
 
-        <div className={`${styles.link} mt-4`}>
+        <div className={`${styles.link} mt-4`} aria-label="go to upgrade">
           <Link href='/'>upgrade</Link>
         </div>
       </div>
@@ -32,7 +32,7 @@ const Profile: React.FC<IProfile> = ({ attributes }) => {
 
       <div className={`${styles.user_info} mt-11`}>
         <p className='paragraph1'>Vinicius</p>
-        <p className='subtext'>Pactto member since 2024</p>
+        <p className='subtext' aria-label="profile text member since">Pactto member since 2024</p>
       </div>
     </div>
   )

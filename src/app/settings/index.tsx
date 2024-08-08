@@ -21,12 +21,12 @@ export const Settings = () => {
   return (
     <WrapperLayout>
       <div className='mb-14 mt-5'>
-        <div className='flex items-center justify-between mb-14'>
-          <h1 className='text-4xl text-white mb-9'>My uploads</h1>
+        <div className='flex items-center justify-between mb-14 flex-col lg:flex-row'>
+          <h1 className='text-4xl text-white mb-9'>Review Settings</h1>
 
-          <div className='flex gap-3'>
-            <Button handleExec={handleUpload} text='reset changes' color='secondary'/>
-            <Button handleExec={handleUpload} text='save changes'/>
+          <div className='flex gap-3 flex-col lg:flex-row'>
+            <Button color='secondary' handleExec={handleUpload} text='reset changes' />
+            <Button handleExec={handleUpload} text='save changes' />
           </div>
         </div>
       </div>
@@ -49,7 +49,7 @@ export const Settings = () => {
 
       <section className="flex flex-col gap-4 mt-9 mb-9">
         <p className="text-white text-2xl">Note color options</p>
-        <div className="flex gap-4">
+        <div className="flex gap-4 flex-col lg:flex-row">
           <ColorSelector initialColor="#008000" label="Color 1" />
           <ColorSelector initialColor="#FF0000" label="Color 2" />
           <ColorSelector initialColor="#FFFFFF" label="Color 3" />
@@ -58,27 +58,27 @@ export const Settings = () => {
       </section>
 
       <section>
-        <div className="flex gap-4 w-fit">
+        <div className="flex gap-4 w-fit flex-col lg:flex-row">
           <Select
             key={0}
             label="Camera"
+            onChange={handleSelection}
             options={["Default", "Option 2", "Option 3"]}
             value="Default"
-            onChange={handleSelection}
           />
           <Select
             key={1}
             label="Microphone"
+            onChange={handleSelection}
             options={["Default", "Option 2", "Option 3"]}
             value="Default"
-            onChange={handleSelection}
           />
           <Select
             key={2}
             label="Speakers"
+            onChange={handleSelection}
             options={["Default", "Option 2", "Option 3"]}
             value="Default"
-            onChange={handleSelection}
           />
         </div>
       </section>

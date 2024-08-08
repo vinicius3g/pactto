@@ -13,15 +13,15 @@ const Input: React.FC<IInput> = ({ handleChange }) => {
   return (
     <div className={`${styles.input_container} ${isFocused ? styles.input_containerFocused : ''}`}>
       <input
-        type="text"
         className={styles.input}
-        onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
         onChange={handleChange}
+        onFocus={() => setIsFocused(true)}
         placeholder='Search'
+        type="text"
       />
 
-      <button className={styles.button}>
+      <button className={styles.button} aria-label="Search">
         <SearchIcon sx={{ color: '#ffffff', fontSize: 38 }} />
       </button>
     </div>

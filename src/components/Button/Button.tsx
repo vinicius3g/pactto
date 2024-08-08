@@ -14,7 +14,7 @@ const Button: React.FC<IButton> = ({ text, icon, color = 'primary', handleExec }
 
   return (
     <button className={`${styles.button} ${colorSelect}`} onClick={handleExec}>
-      {icon && <AddIcon sx={{ color: '#232225', fontSize: 18, marginRight: 1 }} />}
+      {icon ? <AddIcon sx={{ color: '#232225', fontSize: 18, marginRight: 1 }} /> : null}
       <span className='font-medium uppercase'>{text}</span>
     </button>
   )

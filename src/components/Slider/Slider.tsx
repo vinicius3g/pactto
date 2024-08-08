@@ -3,7 +3,7 @@ import { Slider as MuiSlider } from "@mui/material";
 import { FC, useState } from "react";
 
 interface ISlider {
-  label?: string;
+  readonly label?: string;
 }
 
 export const Slider: FC<ISlider> = ({ label }) => {
@@ -14,17 +14,17 @@ export const Slider: FC<ISlider> = ({ label }) => {
   };
 
   return (
-    <Box className="flex items-center gap-5 text-white" sx={{ width: 400 }}>
+    <Box className="flex items-center gap-5 text-white">
       <p className="text-2xl">{label}</p>
       <MuiSlider
-        defaultValue={value}
         aria-label="Default"
-        valueLabelDisplay="auto"
+        defaultValue={value}
         onChange={handleChange}
         sx={{
           color: '#1dbba5',
           width: 160
         }}
+        valueLabelDisplay="auto"
       />
     </Box>
   );
