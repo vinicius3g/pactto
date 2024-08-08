@@ -2,11 +2,9 @@
   "extends": [
     "next",
     "next/core-web-vitals",
-    "eslint:all",
     "plugin:react/all",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jsx-a11y/recommended"
@@ -28,26 +26,11 @@
   },
   "rules": {
     "new-cap": 0,
-    "sort-imports": [
-      "error",
-      {
-        "ignoreCase": false,
-        "ignoreDeclarationSort": false,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": [
-          "all",
-          "multiple",
-          "single",
-          "none"
-        ]
-      }
-    ],
+    "sort-imports": 0,
     "indent": [
       "error",
       2
     ],
-    // "quotes": ["error", "single"],
-    // "semi": ["error", "never"],
     "func-style": 0,
     "max-len": 0,
     "no-magic-numbers": 0,
@@ -62,12 +45,6 @@
     ],
     "function-call-argument-newline": 0,
     "padded-blocks": 0,
-    // "padding-line-between-statements": [
-    //   "error",
-    //   { "blankLine": "always", "prev": "*", "next": "return" },
-    //   { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*"},
-    //   { "blankLine": "any",    "prev": ["const", "let", "var"], "next": ["const", "let", "var"]}
-    // ],
     "object-curly-spacing": [
       "error",
       "always"
@@ -76,8 +53,6 @@
       "error",
       "never"
     ],
-    "quote-props": 0,
-    "react/prop-types": 0,
     "react/jsx-indent": [
       2,
       2
@@ -86,6 +61,11 @@
       2,
       2
     ],
+    "react/require-default-props": 0,
+    "react/jsx-sort-props": 0,
+    "react/button-has-type": 0,
+    "react/prop-types": 0,
+    "react/jsx-no-bind": 0,
     "react/jsx-filename-extension": 0,
     "react/react-in-jsx-scope": 0,
     "react/jsx-no-literals": 0,
