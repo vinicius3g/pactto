@@ -78,9 +78,9 @@ const MenuItem: React.FC = () => {
             <p>Subscription</p>
           </Link>
         </li>
-        <li className={`${styles.item} ${urlValidate('/')}`}>
-          <Link href='/' className={`${styles.item_wrapper} p-12 pb-0 pt-0`}>
-            <SettingsIcon sx={{ color: urlValidateChangeColorIcon(''), fontSize: 24, marginRight: 1.5 }} />
+        <li className={`${styles.item} ${urlValidate('/settings')}`}>
+          <Link href='/settings' className={`${styles.item_wrapper} p-12 pb-0 pt-0`}>
+            <SettingsIcon sx={{ color: urlValidateChangeColorIcon('/settings'), fontSize: 24, marginRight: 1.5 }} />
             <p>Review Settings</p>
           </Link>
         </li>
