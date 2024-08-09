@@ -155,3 +155,12 @@
   font-weight: 600;
   text-transform: uppercase;
 }
+
+.space-bar {
+  width: 100%;
+  border-bottom: 2px solid #1DBBA5;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: .26px;
+  margin-bottom: 25px;
+}
