@@ -1,0 +1,38 @@
+.custom_radio_button_label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom_radio_button_label p {
+  color: theme('colors.gray.500');
+  font-size: 1.5rem;
+}
+
+.custom_radio_button_input {
+  display: none;
+}
+
+.custom_radio_button_circle {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid theme('colors.gray.500');
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.custom_radio_button_circle.checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--inner-circle-size, 10px);
+  height: var(--inner-circle-size, 10px);
+  background-color: theme('colors.gray.500');
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
