@@ -61,6 +61,8 @@
       2,
       2
     ],
+    "react/no-mutating-props": 0,
+    "react/jsx-max-props-per-line": 0,
     "react/require-default-props": 0,
     "react/jsx-sort-props": 0,
     "react/button-has-type": 0,
@@ -73,15 +75,6 @@
     "react/jsx-max-depth": 0,
     "react/jsx-newline": 0,
     "react/jsx-props-no-spreading": 0,
-    "react/jsx-max-props-per-line": [
-      "error",
-      {
-        "maximum": {
-          "single": 3,
-          "multi": 1
-        }
-      }
-    ],
     "react/forbid-component-props": [
       "error",
       {
