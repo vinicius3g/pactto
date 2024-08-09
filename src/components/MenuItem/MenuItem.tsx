@@ -52,9 +52,9 @@ const MenuItem: React.FC = () => {
             <p>Personal information</p>
           </Link>
         </li>
-        <li className={`${styles.item} ${urlValidate('/')}`}>
-          <Link className={`${styles.item_wrapper} p-12 pb-0 pt-0`} href='/'>
-            <RedeemIcon sx={{ color: urlValidateChangeColorIcon(''), fontSize: 24, marginRight: 1.5 }} />
+        <li className={`${styles.item} ${urlValidate('/packages')}`}>
+          <Link className={`${styles.item_wrapper} p-12 pb-0 pt-0`} href='/packages'>
+            <RedeemIcon sx={{ color: urlValidateChangeColorIcon('/packages'), fontSize: 24, marginRight: 1.5 }} />
             <p>Review packages for sale</p>
           </Link>
         </li>
