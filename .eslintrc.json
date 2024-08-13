@@ -7,7 +7,8 @@
     "plugin:import/warnings",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended"
+    "plugin:jsx-a11y/recommended",
+    "prettier"
   ],
   "env": {
     "browser": true,
@@ -27,10 +28,7 @@
   "rules": {
     "new-cap": 0,
     "sort-imports": 0,
-    "indent": [
-      "error",
-      2
-    ],
+    "indent": ["error", 2],
     "func-style": 0,
     "max-len": 0,
     "no-magic-numbers": 0,
@@ -45,22 +43,10 @@
     ],
     "function-call-argument-newline": 0,
     "padded-blocks": 0,
-    "object-curly-spacing": [
-      "error",
-      "always"
-    ],
-    "one-var": [
-      "error",
-      "never"
-    ],
-    "react/jsx-indent": [
-      2,
-      2
-    ],
-    "react/jsx-indent-props": [
-      2,
-      2
-    ],
+    "object-curly-spacing": ["error", "always"],
+    "one-var": ["error", "never"],
+    "react/jsx-indent": [2, 2],
+    "react/jsx-indent-props": [2, 2],
     "react/no-mutating-props": 0,
     "react/jsx-max-props-per-line": 0,
     "react/require-default-props": 0,
@@ -78,31 +64,17 @@
     "react/forbid-component-props": [
       "error",
       {
-        "forbid": [
-          "style",
-          "dangerouslySetInnerHTML"
-        ]
+        "forbid": ["style", "dangerouslySetInnerHTML"]
       }
     ],
     "react/function-component-definition": [
       2,
       {
-        "namedComponents": [
-          "function-declaration",
-          "arrow-function"
-        ],
-        "unnamedComponents": [
-          "arrow-function"
-        ]
+        "namedComponents": ["function-declaration", "arrow-function"],
+        "unnamedComponents": ["arrow-function"]
       }
     ],
-    "arrow-body-style": [
-      "off"
-    ]
+    "arrow-body-style": ["off"]
   },
-  "ignorePatterns": [
-    "node_modules/",
-    ".next/",
-    "next-env.d.ts"
-  ]
+  "ignorePatterns": ["node_modules/", ".next/", "next-env.d.ts"]
 }
